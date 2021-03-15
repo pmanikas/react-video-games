@@ -23,6 +23,7 @@ const gamesReducer = (state = initState, action) => {
       return {
         ...state,
         searched: action.payload.searched,
+        areGamesLoading: false,
       };
     case "CLEAR_SEARCHED":
       return {

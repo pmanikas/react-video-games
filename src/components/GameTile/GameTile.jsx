@@ -41,7 +41,7 @@ const GameTile = ({ name, released, image, id }) => {
         <motion.img
           className={styles.image}
           layoutId={`image ${stringPathId}`}
-          src={prepareImage(image, 640)}
+          src={!!image && prepareImage(image, 640)}
           alt={name} />
       </Link>
     </motion.div>
