@@ -1,0 +1,14 @@
+@import "./../../styles/design";
+
+.gamesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 2.5rem;
+  grid-row-gap: 5rem;
+  min-height: 80vh;
+}
+
+.heading {
+  padding: 2.5rem 0rem;
+  color: $c-silver;
+}

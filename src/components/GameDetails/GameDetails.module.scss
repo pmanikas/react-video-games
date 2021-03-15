@@ -1,0 +1,78 @@
+@import "./../../styles/design";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: scroll;
+  background: transparentize($c-black, 0.5);
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $c-salmon;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $c-white;
+  }
+}
+
+.details {
+  position: absolute;
+  left: 10%;
+  z-index: 10;
+  width: 80%;
+  padding: 2rem 5rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  background: $c-white;
+  color: $c-mine-shaft;
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.star {
+  display: inline;
+  width: 2rem;
+  height: 2rem;
+}
+
+.info {
+  text-align: center;
+}
+
+.platforms {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.platformImage {
+  width: 2.5rem;
+  margin-left: 3rem;
+}
+
+.media {
+  margin-top: 5rem;
+}
+
+.mainImage {
+  width: 100%;
+}
+
+.description {
+  margin: 5rem 0rem;
+}
+
+.galleryImage {
+  width: 100%;
+}

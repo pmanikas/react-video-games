@@ -1,0 +1,27 @@
+@import "./design";
+@import "./reset";
+@import "./typography";
+
+* {
+  scrollbar-color: transparentize($c-dusty-gray, 0.5) transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparentize($c-dusty-gray, 0.5);
+}
+
+body {
+  background: $c-cod-gray;
+}
+
+h3{
+  color: $c-mine-shaft;
+}
+
+p{
+  color: $c-dove-gray;
+}
+
+a{
+  color: $c-mine-shaft;
+}
