@@ -1,6 +1,7 @@
 @import "./../../styles/design";
 
 .gameTile {
+  position: relative;
   min-height: 30vh;
   overflow: hidden;
   text-align: center;
