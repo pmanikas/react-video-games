@@ -23,7 +23,7 @@ const GameDetails = ({ pathId }) => {
     const element = e.target;
     if (element.classList.contains("shadow")) {
       document.body.style.overflow = "auto";
-      history.push(process.env.PUBLIC_URL);
+      history.push("/");
     }
   };
 
