@@ -1,8 +1,8 @@
 {
+  "homepage": "https://pmanikas.github.io/react-video-games",
   "name": "react-video-games",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://pmanikas.github.io/react-video-games",
   "scripts": {
     "predeploy": "BASE_URL=https://pmanikas.github.io/react-video-games npm run build",
     "deploy": "gh-pages -d build",
