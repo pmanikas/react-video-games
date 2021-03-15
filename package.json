@@ -2,7 +2,7 @@
   "name": "react-video-games",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://pmanikas.github.io/react-video-games",
+  "homepage": "https://pmanikas.github.io/react-video-games/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
