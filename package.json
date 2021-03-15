@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "predeploy": "PUBLIC_URL=https://pmanikas.github.io/react-video-games npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "PUBLIC_URL=https://pmanikas.github.io/react-video-games npm run build && mv build docs",
+    "deploy": "gh-pages -d docs",
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
