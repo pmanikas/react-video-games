@@ -9,9 +9,14 @@ import {
 
 
 export const loadGames = () => async (dispatch) => {
+  dispatch({
+    type: "LOADING_GAMES",
+  });
+
   const popularData = await getPopularGames();
   const upcomingData = await getUpcomingGames();
   const newGamesData = await getNewGames();
+
   dispatch({
     type: "FETCH_GAMES",
     payload: {
@@ -23,6 +28,10 @@ export const loadGames = () => async (dispatch) => {
 };
 
 export const fetchSearch = (query) => async (dispatch) => {
+  dispatch({
+    type: "LOADING_GAMES",
+  });
+
   const searchData = await searchGames(query);
 
   dispatch({

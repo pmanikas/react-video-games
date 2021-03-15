@@ -57,16 +57,16 @@ const GameDetails = ({ pathId }) => {
     }
   };
 
-  const { screen, game, isLoading } = useSelector((state) => state.gamesState);
+  const { screen, game, isGameLoading } = useSelector((state) => state.gamesState);
 
   return (
     <>
-      {!isLoading && (
-        <motion.div
+      {!isGameLoading && (
+        <div
           className={`${styles.container} shadow`}
           onClick={exitDetailHander}
         >
-          <motion.div layoutId={`${pathId}`} className={styles.details}>
+          <motion.div layoutId={`${pathId}`} initial="show" className={styles.details}>
             <div className={styles.ratingContainer}>
               <div className="rating">
                 <h3>{game.name}</h3>
@@ -74,7 +74,7 @@ const GameDetails = ({ pathId }) => {
                 {getStars()}
               </div>
               <div className={styles.info}>
-                <h3>Available On</h3>
+                <h3>Available on</h3>
                 <div className={styles.platforms}>
                   {game.platforms.map((data) => (
                     <img
@@ -90,7 +90,7 @@ const GameDetails = ({ pathId }) => {
             <div className={styles.media}>
               <img
                 className={styles.mainImage}
-                src={prepareImage(game.background_image, 1280)}
+                src={game && game.background_image && prepareImage(game.background_image, 1280)}
                 alt={game.background_image}
               />
             </div>
@@ -101,14 +101,14 @@ const GameDetails = ({ pathId }) => {
               {screen.results.map((screen) => (
                 <img
                   className={styles.galleryImage}
-                  src={prepareImage(screen.image, 1280)}
+                  src={screen && screen.image && prepareImage(screen.image, 1280)}
                   key={screen.id}
                   alt={screen.image}
                 />
               ))}
             </div>
           </motion.div>
-        </motion.div>
+        </div>
       )}
     </>
   );

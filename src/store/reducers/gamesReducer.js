@@ -3,9 +3,10 @@ const initState = {
   newGames: [],
   upcoming: [],
   searched: [],
-  game: { platforms: [] },
+  game: {},
   screen: { results: [] },
-  isLoading: true,
+  isGameLoading: false,
+  areGamesLoading: false,
 };
 
 const gamesReducer = (state = initState, action) => {
@@ -16,6 +17,7 @@ const gamesReducer = (state = initState, action) => {
         popular: action.payload.popular,
         upcoming: action.payload.upcoming,
         newGames: action.payload.newGames,
+        areGamesLoading: false,
       };
     case "FETCH_SEARCHED":
       return {
@@ -32,12 +34,17 @@ const gamesReducer = (state = initState, action) => {
         ...state,
         game: action.payload.game,
         screen: action.payload.screen,
-        isLoading: false,
+        isGameLoading: false,
       };
     case "LOADING_DETAIL":
       return {
         ...state,
-        isLoading: true,
+        isGameLoading: true,
+      };
+    case "LOADING_GAMES":
+      return {
+        ...state,
+        areGamesLoading: true,
       };
     default:
       return { ...state };
