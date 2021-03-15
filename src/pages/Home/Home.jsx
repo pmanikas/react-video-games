@@ -26,7 +26,7 @@ const Home = () => {
     }
   }, [dispatch]);
 
-  const { game, popular, newGames, upcoming, searched, isGameLoading } = useSelector(
+  const { game, popular, newGames, upcoming, searched, isGameLoading, areGamesLoading } = useSelector(
     (state) => state.gamesState
   );
 
@@ -40,7 +40,7 @@ const Home = () => {
         <GamesList games={popular} title={`Popular Games`} />
         <GamesList games={newGames} title={`New Games`} />
         <AnimatePresence>
-          {pathId && !isGameLoading && game && game.id && <GameDetails pathId={pathId} />}
+          {pathId && !isGameLoading && game && game.id && !areGamesLoading && <GameDetails pathId={pathId} />}
         </AnimatePresence>
       </AnimateSharedLayout>
     </div>

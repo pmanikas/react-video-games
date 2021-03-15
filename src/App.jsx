@@ -8,9 +8,7 @@ function App() {
     <HashRouter basename="/">
       <div className="App">
         <Nav />
-        <Route path={["/", "/game/:id"]}>
-          <Home />
-        </Route>
+        <Route path={["/", "/game/:id"]} component={Home} />
       </div>
     </HashRouter>
   );
