@@ -1,4 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar as faStarFull } from "@fortawesome/free-solid-svg-icons";
+import { faStar as faStarEmpty } from "@fortawesome/free-regular-svg-icons";
 
 import styles from "./GameDetails.module.scss";
 import { motion } from "framer-motion";
@@ -13,8 +16,6 @@ import xbox from "./../../img/xbox.svg";
 import nintendo from "./../../img/nintendo.svg";
 import apple from "./../../img/apple.svg";
 import gamepad from "./../../img/gamepad.svg";
-import starEmpty from "./../../img/star-empty.png";
-import starFull from "./../../img/star-full.png";
 
 const GameDetails = ({ pathId }) => {
   const history = useHistory();
@@ -32,9 +33,9 @@ const GameDetails = ({ pathId }) => {
     const rating = Math.floor(game.rating);
     for (let i = 1; i <= 5; i++) {
       if (i <= rating) {
-        stars.push(<img alt="star" className={styles.star} key={i} src={starFull}></img>);
+        stars.push(<FontAwesomeIcon icon={faStarFull} className={styles.star} key={i}></FontAwesomeIcon>);
       } else {
-        stars.push(<img alt="star" className={styles.star} key={i} src={starEmpty}></img>);
+        stars.push(<FontAwesomeIcon icon={faStarEmpty} className={styles.star} key={i}></FontAwesomeIcon>);
       }
     }
     return stars;

@@ -3,12 +3,12 @@
 .gamesList {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-column-gap: 2.5rem;
-  grid-row-gap: 5rem;
+  grid-column-gap: $base-spacing;
+  grid-row-gap: $base-spacing * 2;
   min-height: 80vh;
 }
 
 .heading {
-  padding: 2.5rem 0rem;
+  padding: $s-xl 0rem;
   color: $c-silver;
 }

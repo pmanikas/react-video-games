@@ -10,6 +10,11 @@
   background-color: transparentize($c-dusty-gray, 0.5);
 }
 
+*::-webkit-scrollbar-thumb {
+  border-radius: $base-radius;
+  border: transparent;
+}
+
 body {
   background: $c-cod-gray;
 }

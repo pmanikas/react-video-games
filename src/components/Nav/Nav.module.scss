@@ -1,7 +1,7 @@
 @import "./../../styles/design";
 
 .nav {
-  padding: 3rem 5rem 0;
+  padding: $s-xl $s-xxl 0;
   text-align: center;
 }
 
@@ -9,17 +9,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: $s-xl;
   cursor: pointer;
 }
 
 .logo {
-  height: 3.5rem;
-  width: 3.5rem;
+  height: $s-xl;
+  width: $s-xl;
   margin-right: 1rem;
 }
 
 .title {
-  font-size: 3.5rem;
+  font-size: $s-xl;
   color: $c-silver;
 }

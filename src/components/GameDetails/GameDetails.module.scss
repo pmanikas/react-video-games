@@ -11,7 +11,7 @@
   background: transparentize($c-black, 0.5);
 
   &::-webkit-scrollbar {
-    width: 0.5rem;
+    width: $s-xs;
   }
 
   &::-webkit-scrollbar-thumb {
@@ -28,9 +28,9 @@
   left: 10%;
   z-index: 10;
   width: 80%;
-  padding: 2rem 5rem;
-  margin: 1rem 0;
-  border-radius: 1rem;
+  padding: $s-xl $s-xxl;
+  margin: $s-m 0;
+  border-radius: $base-radius;
   background: $c-white;
   color: $c-mine-shaft;
 }
@@ -41,10 +41,14 @@
   justify-content: space-between;
 }
 
+.star~.star {
+  margin-left: $s-xxs;
+}
+
 .star {
-  display: inline;
-  width: 2rem;
-  height: 2rem;
+  width: $s-l;
+  height: $s-l;
+  color: $c-salmon;
 }
 
 .info {
@@ -53,16 +57,19 @@
 
 .platforms {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
 }
 
 .platformImage {
-  width: 2.5rem;
-  margin-left: 3rem;
+  width: $s-l;
+}
+
+.platformImage~.platformImage {
+  margin-left: $s-l;
 }
 
 .media {
-  margin-top: 5rem;
+  margin-top: $s-xl;
 }
 
 .mainImage {
@@ -70,7 +77,7 @@
 }
 
 .description {
-  margin: 5rem 0rem;
+  margin: $s-xxl 0rem;
 }
 
 .galleryImage {

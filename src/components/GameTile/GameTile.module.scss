@@ -2,16 +2,15 @@
 
 .gameTile {
   position: relative;
-  min-height: 30vh;
+  min-height: 33.33vh;
   overflow: hidden;
   text-align: center;
-  border-radius: 1rem;
+  border-radius: $base-radius;
   background: $c-silver;
-  box-shadow: 0px 5px 20px transparentize($c-black, 0.8);
-  cursor: pointer;
 }
+
 .image {
   width: 100%;
-  height: 40vh;
+  height: 33.33vh;
   object-fit: cover;
 }

@@ -20,6 +20,7 @@ const Search = ({ submitSearch }) => {
         value={textInput}
         onChange={changeInputHandler}
         type="text"
+        placeholder="Search for Game Titles..."
       />
       <button
         className={styles.searchButton}
