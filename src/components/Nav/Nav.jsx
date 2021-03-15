@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import Search from "./../Search/Search";
 
 //Animation
 import styles from "./Nav.module.scss";
@@ -12,16 +13,9 @@ import { fadeIn } from "../../settings/animations";
 
 const Nav = () => {
   const dispatch = useDispatch();
-  const [textInput, setTextInput] = useState("");
-
-  const inputHandler = (e) => {
-    setTextInput(e.target.value);
-  };
-  const submitSearch = (e) => {
-    e.preventDefault();
+  const submitSearch = (textInput) => {
     dispatch(fetchSearch(textInput));
-    setTextInput("");
-  };
+  }
   const clearSearched = () => {
     dispatch({ type: "CLEAR_SEARCHED" });
   };
@@ -40,12 +34,7 @@ const Nav = () => {
         <img className={styles.logo} src={logo} alt="logo" />
         <h1 className={styles.title}>Game Bay</h1>
       </MotionLogo>
-      <form className={styles.searchForm}>
-        <input className={styles.searchInput} value={textInput} onChange={inputHandler} type="text" />
-        <button className={styles.searchButton} onClick={submitSearch} type="submit">
-          Search
-        </button>
-      </form>
+      <Search submitSearch={submitSearch} />
     </MotionNav>
   );
 };
