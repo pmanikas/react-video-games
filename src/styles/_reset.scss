@@ -44,15 +44,12 @@ input[type="reset"],
 input[type="submit"],
 button[disabled],
 html input[disabled],
-button::-moz-focus-inner,
-input::-moz-focus-inner,
 input[type="checkbox"],
 input[type="radio"],
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button,
-input[type="search"],
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type="search"] {
+  appearance: none;
   border: none;
   background-image: none;
   background-color: transparent;
@@ -60,4 +57,5 @@ input[type="search"]::-webkit-search-decoration {
   -moz-box-shadow: none;
   box-shadow: none;
   outline: none;
+  border-radius: 0;
 }
