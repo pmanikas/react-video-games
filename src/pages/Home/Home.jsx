@@ -34,7 +34,7 @@ const Home = () => {
     <div className={styles.container}>
       <AnimateSharedLayout type="crossfade">
         {searched && !!searched.length && (
-          <GamesList games={searched} title={`Searched Games`} />
+          <GamesList games={searched} title={`Search Results`} />
         )}
         <GamesList games={upcoming} title={`Upcoming Games`} />
         <GamesList games={popular} title={`Popular Games`} />
