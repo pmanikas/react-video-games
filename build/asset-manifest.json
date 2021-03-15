@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "https://pmanikas.github.io/react-video-games/static/css/main.32ad9b06.chunk.css",
+    "main.js": "https://pmanikas.github.io/react-video-games/static/js/main.9644060a.chunk.js",
+    "main.js.map": "https://pmanikas.github.io/react-video-games/static/js/main.9644060a.chunk.js.map",
+    "runtime-main.js": "https://pmanikas.github.io/react-video-games/static/js/runtime-main.0326aeb7.js",
+    "runtime-main.js.map": "https://pmanikas.github.io/react-video-games/static/js/runtime-main.0326aeb7.js.map",
+    "static/js/2.9d6d6441.chunk.js": "https://pmanikas.github.io/react-video-games/static/js/2.9d6d6441.chunk.js",
+    "static/js/2.9d6d6441.chunk.js.map": "https://pmanikas.github.io/react-video-games/static/js/2.9d6d6441.chunk.js.map",
+    "index.html": "https://pmanikas.github.io/react-video-games/index.html",
+    "static/css/main.32ad9b06.chunk.css.map": "https://pmanikas.github.io/react-video-games/static/css/main.32ad9b06.chunk.css.map",
+    "static/js/2.9d6d6441.chunk.js.LICENSE.txt": "https://pmanikas.github.io/react-video-games/static/js/2.9d6d6441.chunk.js.LICENSE.txt",
+    "static/media/apple.5757c37e.svg": "https://pmanikas.github.io/react-video-games/static/media/apple.5757c37e.svg",
+    "static/media/gamepad.c9269ef5.svg": "https://pmanikas.github.io/react-video-games/static/media/gamepad.c9269ef5.svg",
+    "static/media/logo.bdaab759.svg": "https://pmanikas.github.io/react-video-games/static/media/logo.bdaab759.svg",
+    "static/media/nintendo.f579be04.svg": "https://pmanikas.github.io/react-video-games/static/media/nintendo.f579be04.svg",
+    "static/media/playstation.18cc4b9c.svg": "https://pmanikas.github.io/react-video-games/static/media/playstation.18cc4b9c.svg",
+    "static/media/steam.d7b8819f.svg": "https://pmanikas.github.io/react-video-games/static/media/steam.d7b8819f.svg",
+    "static/media/xbox.3e7db735.svg": "https://pmanikas.github.io/react-video-games/static/media/xbox.3e7db735.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0326aeb7.js",
+    "static/js/2.9d6d6441.chunk.js",
+    "static/css/main.32ad9b06.chunk.css",
+    "static/js/main.9644060a.chunk.js"
+  ]
+}
