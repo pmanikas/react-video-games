@@ -83,3 +83,8 @@
 .galleryImage {
   width: 100%;
 }
+
+.sliderContainer {
+  position: relative;
+  z-index: 1000;
+}

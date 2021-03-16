@@ -1,4 +1,5 @@
 import React from "react";
+import Slider from "./../../components/Slider/Slider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarFull } from "@fortawesome/free-solid-svg-icons";
 import { faStar as faStarEmpty } from "@fortawesome/free-regular-svg-icons";
@@ -33,9 +34,21 @@ const GameDetails = ({ pathId }) => {
     const rating = Math.floor(game.rating);
     for (let i = 1; i <= 5; i++) {
       if (i <= rating) {
-        stars.push(<FontAwesomeIcon icon={faStarFull} className={styles.star} key={i}></FontAwesomeIcon>);
+        stars.push(
+          <FontAwesomeIcon
+            icon={faStarFull}
+            className={styles.star}
+            key={i}
+          ></FontAwesomeIcon>
+        );
       } else {
-        stars.push(<FontAwesomeIcon icon={faStarEmpty} className={styles.star} key={i}></FontAwesomeIcon>);
+        stars.push(
+          <FontAwesomeIcon
+            icon={faStarEmpty}
+            className={styles.star}
+            key={i}
+          ></FontAwesomeIcon>
+        );
       }
     }
     return stars;
@@ -58,7 +71,17 @@ const GameDetails = ({ pathId }) => {
     }
   };
 
-  const { screen, game, isGameLoading } = useSelector((state) => state.gamesState);
+  const { screen, game, isGameLoading } = useSelector(
+    (state) => state.gamesState
+  );
+
+  // const galleryImages = screen.results.map((obj) => {
+  //   return prepareImage(obj.image, 1280);
+  // });
+
+  const galleryImages = screen.results.map((obj) => {
+    return obj.image;
+  })
 
   return (
     <>
@@ -67,7 +90,11 @@ const GameDetails = ({ pathId }) => {
           className={`${styles.container} shadow`}
           onClick={exitDetailHander}
         >
-          <motion.div layoutId={`${pathId}`} initial="show" className={styles.details}>
+          <motion.div
+            layoutId={`${pathId}`}
+            initial="show"
+            className={styles.details}
+          >
             <div className={styles.ratingContainer}>
               <div className="rating">
                 <h3>{game.name}</h3>
@@ -91,22 +118,19 @@ const GameDetails = ({ pathId }) => {
             <div className={styles.media}>
               <img
                 className={styles.mainImage}
-                src={game && game.background_image && prepareImage(game.background_image, 1280)}
+                src={
+                  game &&
+                  game.background_image &&
+                  prepareImage(game.background_image, 1280)
+                }
                 alt={game.background_image}
               />
             </div>
             <div className={styles.description}>
               <p>{game.description_raw}</p>
             </div>
-            <div>
-              {screen.results.map((screen) => (
-                <img
-                  className={styles.galleryImage}
-                  src={screen && screen.image && prepareImage(screen.image, 1280)}
-                  key={screen.id}
-                  alt={screen.image}
-                />
-              ))}
+            <div className={styles.sliderContainer}>
+              <Slider slides={galleryImages} />
             </div>
           </motion.div>
         </div>
