@@ -4,7 +4,7 @@ import App from "./App";
 
 import "./styles/style.scss";
 
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 // REDUX SETUP
 import { createStore, applyMiddleware, compose } from "redux";

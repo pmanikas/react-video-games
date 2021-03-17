@@ -5,13 +5,13 @@ import styles from "./LazyImage.module.scss";
 const placeHolder =
   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkqAcAAIUAgUW0RjgAAAAASUVORK5CYII=";
 
-const LazyImage = ({ src, alt }) => {
+const LazyImage = ({ src, alt, disableAnimation }) => {
   const [imageSrc, setImageSrc] = useState(placeHolder);
   const [imageRef, setImageRef] = useState();
   const [hasError, setHasError] = useState(false);
 
   const onLoad = (e) => {
-    e.target.classList.add(styles.loaded);
+    !disableAnimation && e.target.classList.add(styles.loaded);
   };
 
   const onError = (e) => {
@@ -28,7 +28,7 @@ const LazyImage = ({ src, alt }) => {
       className={styles.image}
       style={hasError ? { transform: `content: url(${placeHolder})` } : {}}
       ref={setImageRef}
-      src={imageSrc || placeHolder}
+      src={imageSrc}
       alt={alt}
       onLoad={onLoad}
       onError={onError}

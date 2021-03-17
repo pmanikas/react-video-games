@@ -32,7 +32,7 @@ const Slider = (props) => {
     resizeRef.current = handleResize;
   });
 
-  const getWidth = () =>  sliderRef.current && sliderRef.current.getBoundingClientRect().width;
+  const getWidth = () =>  sliderRef.current && sliderRef.current.clientWidth;
 
   useEffect(() => {
     const slider = sliderRef.current;
@@ -42,7 +42,7 @@ const Slider = (props) => {
     };
 
     const smooth = (e) => {
-      if (e.target.className.includes("SliderContent")) {
+      if (e.target.className.includes("sliderContent")) {
         transitionRef.current();
       }
     };

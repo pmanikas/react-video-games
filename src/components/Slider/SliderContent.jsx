@@ -10,7 +10,7 @@ const SliderContent = (props) => {
   };
 
   return (
-    <div className="SliderContent" style={style}>
+    <div className="sliderContent" style={style}>
       {props.children}
     </div>
   );
