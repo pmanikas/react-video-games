@@ -1,6 +1,7 @@
 import React from "react";
 import GameDetailsPlatforms from "./GameDetailsPlatforms";
 import Slider from "./../../components/Slider/Slider";
+import LazyImage from "./../LazyImage/LazyImage";
 
 import styles from "./GameDetails.module.scss";
 import { motion } from "framer-motion";
@@ -12,7 +13,6 @@ import GameDetailsRating from "./GameDetailsRating";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
-// import { faStar as faStarEmpty } from "@fortawesome/free-regular-svg-icons";
 
 const GameDetails = ({ pathId }) => {
   const history = useHistory();
@@ -36,24 +36,24 @@ const GameDetails = ({ pathId }) => {
   return (
     <>
       {!isGameLoading && (
-        <div
-          className={`${styles.container} close`}
-          onClick={exitDetailHander}
-        >
+        <div className={`${styles.container} close`} onClick={exitDetailHander}>
           <motion.div
             layoutId={`${pathId}`}
             initial="show"
             className={styles.content}
           >
-            <FontAwesomeIcon className={`${styles.closeButton} close`} onClick={exitDetailHander} icon={faTimesCircle} />
+            <FontAwesomeIcon
+              className={`${styles.closeButton} close`}
+              onClick={exitDetailHander}
+              icon={faTimesCircle}
+            />
             <h3>{game.name}</h3>
             <div className={styles.details}>
               <GameDetailsRating gameRating={game.rating} />
               <GameDetailsPlatforms platforms={game.platforms} />
             </div>
-            <div className={styles.media}>
-              <img
-                className={styles.mainImage}
+            <div className={styles.mainImage}>
+              <LazyImage
                 src={
                   game &&
                   game.background_image &&

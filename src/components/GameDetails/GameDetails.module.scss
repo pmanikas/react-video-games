@@ -49,12 +49,9 @@
   justify-content: space-between;
 }
 
-.media {
-  margin-top: $s-xl;
-}
-
 .mainImage {
   width: 100%;
+  margin-top: $s-xl;
   border-radius: $base-radius;
   overflow: hidden;
   box-shadow: $base-shadow;

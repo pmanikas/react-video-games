@@ -2,10 +2,10 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import Spinner from "./../Spinner/Spinner";
+import LazyImage from "./../LazyImage/LazyImage";
 import styles from "./GameTile.module.scss";
 import { motion } from "framer-motion";
 import { loadDetail } from "./../../store/actions/gamesAction";
-import { prepareImage } from "./../../utils/prepareImage.util";
 import { popup } from "./../../settings/animations";
 
 const GameTile = ({ name, released, image, id }) => {
@@ -42,11 +42,9 @@ const GameTile = ({ name, released, image, id }) => {
           <h3 className={styles.title}>{name}</h3>
           <p className={styles.date}>Release Date: {released}</p>
         </div>
-        <img
-          className={styles.image}
-          src={!!image && prepareImage(image, 640)}
-          alt={name}
-        />
+        <div className={styles.image}>
+          <LazyImage src={image} alt={name} />
+        </div>
       </Link>
     </motion.div>
   );
