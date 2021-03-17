@@ -1,0 +1,13 @@
+@import "./../../styles/design";
+
+.footer {
+  position: relative;
+  height: 100vh;
+}
+
+.textOverlay {
+  position: absolute;
+  bottom: $s-s;
+  width: 100%;
+  text-align: center;
+}
