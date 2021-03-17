@@ -1,0 +1,18 @@
+@import "./../../styles/design";
+
+.info {
+  text-align: center;
+}
+
+.platforms {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.platformImage {
+  width: $s-l;
+}
+
+.platformImage~.platformImage {
+  margin-left: $s-l;
+}

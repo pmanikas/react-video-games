@@ -1,0 +1,13 @@
+@import "./styles/design";
+
+.container {
+  padding: 0 $s-l;
+  margin-bottom: $s-xl;
+}
+
+@include desktop {
+  .container {
+    padding: 0 $s-xxxl;
+    margin-bottom: $s-xxxl;
+  }
+}

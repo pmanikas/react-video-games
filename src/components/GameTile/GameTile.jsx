@@ -18,9 +18,7 @@ const GameTile = ({ name, released, image, id }) => {
     dispatch(loadDetail(id));
   };
 
-  const { isGameLoading } = useSelector(
-    (state) => state.gamesState
-  );
+  const { isGameLoading } = useSelector((state) => state.gamesState);
 
   const { pathname } = useLocation();
   const pathId = Number(pathname.split("/")[2]);
@@ -34,15 +32,21 @@ const GameTile = ({ name, released, image, id }) => {
       layoutId={stringPathId}
       onClick={loadDetailHandler}
     >
-      { isGameLoading && pathId === id && <Spinner /> }
+      {isGameLoading && pathId === id && (
+        <div className={styles.spinnerContainer}>
+          <Spinner className={styles.spinner} />
+        </div>
+      )}
       <Link to={{ pathname: `game/${id}` }}>
-        <motion.h3 layoutId={`title ${stringPathId}`}>{name}</motion.h3>
-        <p>{released}</p>
-        <motion.img
+        <div className={styles.overlay}>
+          <h3 className={styles.title}>{name}</h3>
+          <p className={styles.date}>Release Date: {released}</p>
+        </div>
+        <img
           className={styles.image}
-          layoutId={`image ${stringPathId}`}
           src={!!image && prepareImage(image, 640)}
-          alt={name} />
+          alt={name}
+        />
       </Link>
     </motion.div>
   );

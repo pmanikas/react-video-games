@@ -1,8 +1,15 @@
+@import "./../../styles/design";
+
 .arrow {
   position: absolute;
   top: 50%;
-  height: 50px;
-  width: 50px;
   cursor: pointer;
   transform: translateY(-50%);
+  font-size: $s-xxl;
+  color: $c-white;
+  opacity: 0.5;
+  transition: .3s ease-out;
+  &:hover {
+    opacity: 0.9;
+  }
 }

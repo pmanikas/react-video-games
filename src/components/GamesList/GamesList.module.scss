@@ -9,6 +9,9 @@
 }
 
 .heading {
-  padding: $s-xl 0rem;
+  width: 100%;
+  padding: $s-xl 0;
   color: $c-silver;
+  margin: 0 auto;
+  text-align: center;
 }

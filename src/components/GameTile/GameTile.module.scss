@@ -2,15 +2,54 @@
 
 .gameTile {
   position: relative;
-  min-height: 33.33vh;
+  min-height: 40vh;
   overflow: hidden;
+  font-size: 0;
   text-align: center;
   border-radius: $base-radius;
-  background: $c-silver;
+  &::before {
+    @include fill;
+    content: '';
+    background-color: $c-black;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  &::after {
+    @include fill;
+    content: '';
+    background-color: $c-salmon;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease-out;
+  }
+  &:hover::after {
+    opacity: 0.1;
+  }
+}
+
+.spinnerContainer {
+  font-size: 2rem;
+}
+
+.overlay {
+  position: absolute;
+  bottom: $s-s;
+  left: $s-s;
+  text-align: left;
+}
+
+.title {
+  color: $c-silver;
+}
+
+.date {
+  color: $c-silver;
+  font-size: 1.8rem;
+  text-align: left;
 }
 
 .image {
   width: 100%;
-  height: 33.33vh;
+  height: 40vh;
   object-fit: cover;
 }

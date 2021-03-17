@@ -8,8 +8,8 @@ import {
 
 const Arrow = ({ direction, handleClick }) => {
   const style = {
-    right: direction === "right" ? `25px` : `unset`,
-    left: direction === "left" ? `25px` : `unset`,
+    right: direction === "right" ? `1rem` : `unset`,
+    left: direction === "left" ? `1rem` : `unset`,
   };
 
   return (
@@ -17,12 +17,10 @@ const Arrow = ({ direction, handleClick }) => {
       {direction === "right" ? (
         <FontAwesomeIcon
           icon={faArrowAltCircleRight}
-          size="2x"
         />
       ) : (
         <FontAwesomeIcon
           icon={faArrowAltCircleLeft}
-          size="2x"
         />
       )}
     </div>

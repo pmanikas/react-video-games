@@ -1,8 +1,17 @@
+@import "./../../styles/design";
+
 .slider {
   position: relative;
-  height: 50vh;
+  height: 250px;
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
   white-space: nowrap;
+}
+
+@include desktop {
+  .slider {
+    height: 450px;
+    max-height: 75vh;
+  }
 }
