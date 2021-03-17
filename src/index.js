@@ -4,6 +4,8 @@ import App from "./App";
 
 import "./styles/style.scss";
 
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+
 // REDUX SETUP
 import { createStore, applyMiddleware, compose } from "redux";
 import rootReducer from "./store/reducers";
@@ -27,3 +29,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+serviceWorkerRegistration.register();
