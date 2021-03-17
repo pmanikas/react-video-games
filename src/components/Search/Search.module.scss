@@ -2,14 +2,36 @@
 
 .searchForm {
   position: relative;
+  display: inline-flex;
+  max-width: 100%;
+  margin: $s-m auto 0;
+  box-shadow: 0px 0px 30px -5px $c-black;
+  &::before {
+    @include fill;
+    content: '';
+    z-index: $z-minus;
+    box-shadow: 0px 0px 30px -5px $c-salmon;
+    opacity: 0;
+    transition: opacity .3s ease-out;
+  }
+  &.focus::before {
+    opacity: 1;
+  }
+  &:hover {
+    .searchButton::before {
+      opacity: 1;
+    }
+  }
+}
+
+.searchContainer {
   display: flex;
   justify-content: center;
   width: 450px;
   max-width: 100%;
-  margin: $s-m auto 0;
+  
   overflow: hidden;
   border-radius: $base-radius;
-  box-shadow: 0px 0px 30px $c-black;
 }
 
 .searchInput {
@@ -22,10 +44,20 @@
 }
 
 .searchButton {
+  position: relative;
+  z-index: $z-flat;
   width: 25%;
   padding: $s-m;
   color: $c-white;
   background: $c-salmon;
   border: none;
   cursor: pointer;
+  &::before {
+    @include fill;
+    z-index: $z-minus;
+    content: '';
+    background: darken($c-salmon, 5%);
+    opacity: 0;
+    transition: opacity .3s ease-out;
+  }
 }
