@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "https://pmanikas.github.io/react-video-games/static/css/main.55a0e85e.chunk.css",
-    "main.js": "https://pmanikas.github.io/react-video-games/static/js/main.04210008.chunk.js",
-    "main.js.map": "https://pmanikas.github.io/react-video-games/static/js/main.04210008.chunk.js.map",
+    "main.css": "https://pmanikas.github.io/react-video-games/static/css/main.f1452101.chunk.css",
+    "main.js": "https://pmanikas.github.io/react-video-games/static/js/main.e8ce0142.chunk.js",
+    "main.js.map": "https://pmanikas.github.io/react-video-games/static/js/main.e8ce0142.chunk.js.map",
     "runtime-main.js": "https://pmanikas.github.io/react-video-games/static/js/runtime-main.0326aeb7.js",
     "runtime-main.js.map": "https://pmanikas.github.io/react-video-games/static/js/runtime-main.0326aeb7.js.map",
-    "static/js/2.999b494b.chunk.js": "https://pmanikas.github.io/react-video-games/static/js/2.999b494b.chunk.js",
-    "static/js/2.999b494b.chunk.js.map": "https://pmanikas.github.io/react-video-games/static/js/2.999b494b.chunk.js.map",
+    "static/js/2.000ac119.chunk.js": "https://pmanikas.github.io/react-video-games/static/js/2.000ac119.chunk.js",
+    "static/js/2.000ac119.chunk.js.map": "https://pmanikas.github.io/react-video-games/static/js/2.000ac119.chunk.js.map",
     "index.html": "https://pmanikas.github.io/react-video-games/index.html",
     "service-worker.js": "https://pmanikas.github.io/react-video-games/service-worker.js",
     "service-worker.js.map": "https://pmanikas.github.io/react-video-games/service-worker.js.map",
-    "static/css/main.55a0e85e.chunk.css.map": "https://pmanikas.github.io/react-video-games/static/css/main.55a0e85e.chunk.css.map",
-    "static/js/2.999b494b.chunk.js.LICENSE.txt": "https://pmanikas.github.io/react-video-games/static/js/2.999b494b.chunk.js.LICENSE.txt",
+    "static/css/main.f1452101.chunk.css.map": "https://pmanikas.github.io/react-video-games/static/css/main.f1452101.chunk.css.map",
+    "static/js/2.000ac119.chunk.js.LICENSE.txt": "https://pmanikas.github.io/react-video-games/static/js/2.000ac119.chunk.js.LICENSE.txt",
     "static/media/apple.5757c37e.svg": "https://pmanikas.github.io/react-video-games/static/media/apple.5757c37e.svg",
     "static/media/gamepad.c9269ef5.svg": "https://pmanikas.github.io/react-video-games/static/media/gamepad.c9269ef5.svg",
     "static/media/logo.bdaab759.svg": "https://pmanikas.github.io/react-video-games/static/media/logo.bdaab759.svg",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0326aeb7.js",
-    "static/js/2.999b494b.chunk.js",
-    "static/css/main.55a0e85e.chunk.css",
-    "static/js/main.04210008.chunk.js"
+    "static/js/2.000ac119.chunk.js",
+    "static/css/main.f1452101.chunk.css",
+    "static/js/main.e8ce0142.chunk.js"
   ]
 }
