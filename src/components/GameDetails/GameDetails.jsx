@@ -14,6 +14,8 @@ import GameDetailsRating from "./GameDetailsRating";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
+import { useSwipeable } from "react-swipeable";
+
 const GameDetails = ({ pathId }) => {
   const history = useHistory();
 
@@ -45,11 +47,18 @@ const GameDetails = ({ pathId }) => {
     };
   }, []);
 
+  const handlers = useSwipeable({
+    onSwipedUp: () => exitDetail(),
+    onSwipedDown: () => exitDetail(),
+    delta: 350,
+  });
+
   return (
     <>
       {!isGameLoading && (
         <div className={`${styles.container} close`} onClick={exitDetailHander}>
           <motion.div
+            {...handlers}
             layoutId={`${pathId}`}
             initial="show"
             className={styles.content}

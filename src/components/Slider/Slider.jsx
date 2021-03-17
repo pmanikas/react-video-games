@@ -127,14 +127,14 @@ const Slider = (props) => {
   };
 
   return (
-    <div className={styles.slider} ref={sliderRef}>
+    <div className={styles.slider} ref={sliderRef} >
       <SliderContent
         translate={translate}
         transition={transition}
         width={getWidth() * _slides.length}
       >
         {_slides.map((_slide, i) => (
-          <Slide width={getWidth()} key={_slide + i} content={_slide} />
+          <Slide prevSlide={prevSlide} nextSlide={nextSlide} width={getWidth()} key={_slide + i} content={_slide} />
         ))}
       </SliderContent>
 
