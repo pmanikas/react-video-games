@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import GameDetailsPlatforms from "./GameDetailsPlatforms";
 import Slider from "./../../components/Slider/Slider";
 import LazyImage from "./../LazyImage/LazyImage";
@@ -19,10 +19,12 @@ const GameDetails = ({ pathId }) => {
 
   const exitDetailHander = (e) => {
     const element = e.target;
-    if (element.classList.contains("close")) {
+    if (element.classList.contains("close")) exitDetail();
+  };
+
+  const exitDetail = () => {
       document.body.style.overflow = "auto";
       history.push("/");
-    }
   };
 
   const { screen, game, isGameLoading } = useSelector(
@@ -32,6 +34,16 @@ const GameDetails = ({ pathId }) => {
   const galleryImages = screen.results.map((obj) => {
     return obj.image;
   });
+
+  useEffect(() => {
+    const handleEsc = (e) => {
+       if (e.key === "Escape") exitDetail();
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => {
+      window.removeEventListener('keydown', handleEsc);
+    };
+  }, []);
 
   return (
     <>
